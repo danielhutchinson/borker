@@ -1,0 +1,5 @@
+@import './variables';
+
+@mixin transition($property) {
+    transition: $property $animation-time $animation-easing-curve;
+}

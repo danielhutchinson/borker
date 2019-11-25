@@ -1,0 +1,59 @@
+@import "./variables";
+@import "./mixins";
+
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-base;
+}
+
+body,
+p {
+  font-size: $font-size-base;
+  color: $color-grey-dark;
+  line-height: $line-height-base;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  font-weight: bold;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  @include transition(transform);
+
+  &:hover {
+    transform: translateY(-0.05rem);
+  }
+}
