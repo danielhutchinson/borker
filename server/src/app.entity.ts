@@ -1,20 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity } from './base-entity';
 
 @Entity()
-export class App {
-  @PrimaryGeneratedColumn('uuid')
-  id: number;
-
+export class App extends BaseEntity {
   @Column({ length: 100 })
   name: string;
 
   @Column({ name: 'welcome_message', length: 300 })
   welcomeMessage: string;
-
-  @Column({
-    name: 'created_at',
-    type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP',
-  })
-  createdAt: string;
 }

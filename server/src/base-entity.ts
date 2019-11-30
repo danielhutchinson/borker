@@ -1,6 +1,13 @@
-import { PrimaryGeneratedColumn } from 'typeorm';
+import { PrimaryGeneratedColumn, Column } from 'typeorm';
 
 export class BaseEntity {
   @PrimaryGeneratedColumn('uuid')
-  appId: number;
+  id: number;
+
+  @Column({
+    name: 'created_at',
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP',
+  })
+  createdAt: string;
 }
