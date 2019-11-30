@@ -1,4 +1,4 @@
-<div class="wrapper">
-  <h1>Borker</h1>
-  <p>{{ (message | async).message }}</p>
+<div class="wrapper" *ngIf="appConfig$ | async as appConfig">
+  <h1>{{ appConfig.name }}</h1>
+  <p>{{ appConfig.welcomeMessage }}</p>
 </div>
