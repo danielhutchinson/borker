@@ -1,0 +1,34 @@
+@import '../../../../styles/variables';
+
+$side-spacing: $gutter-width * 3;
+$card-width: $side-spacing + 31rem;
+
+.sidecard {
+  background: white;
+  width: $card-width;
+  position: absolute;
+  border-radius: 0 $default-border-radius $default-border-radius 0;
+
+  &.middle {
+    top: 20%;
+  }
+}
+
+:host ::ng-deep {
+  & header {
+    margin-left: $side-spacing;
+    padding: $gutter-width $gutter-width $gutter-width / 2 $gutter-width;
+  }
+
+  & section {
+    margin-left: $side-spacing;
+    padding: $gutter-width / 2 $gutter-width;
+  }
+
+  & footer {
+    padding: $gutter-width $gutter-width $gutter-width $side-spacing +
+      $gutter-width;
+    border-radius: 0 0 $default-border-radius 0;
+    background: $color-grey-light;
+  }
+}
