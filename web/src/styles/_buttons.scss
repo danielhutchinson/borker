@@ -1,0 +1,18 @@
+@import './variables';
+
+.button {
+  background: $color-primary;
+  color: $color-white;
+  border: none;
+  border-radius: $button-border-radius;
+  padding: 1em;
+  text-align: center;
+  width: 300px;
+  font-size: $font-size-base;
+  transition: background-color $animation-time $animation-easing-curve;
+
+  &:hover {
+    background: lighten($color-primary, 5%);
+    cursor: pointer;
+  }
+}

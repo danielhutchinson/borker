@@ -16,18 +16,18 @@ $card-width: $side-spacing + 31rem;
 
 :host ::ng-deep {
   & header {
-    margin-left: $side-spacing;
+    margin: 0 $side-spacing;
     padding: $gutter-width $gutter-width $gutter-width / 2 $gutter-width;
   }
 
   & section {
-    margin-left: $side-spacing;
-    padding: $gutter-width / 2 $gutter-width;
+    margin: 0 $side-spacing;
+    padding: $gutter-width;
   }
 
   & footer {
-    padding: $gutter-width $gutter-width $gutter-width $side-spacing +
-      $gutter-width;
+    padding: $gutter-width $side-spacing + $gutter-width $gutter-width
+      $side-spacing + $gutter-width;
     border-radius: 0 0 $default-border-radius 0;
     background: $color-grey-light;
   }

@@ -1,0 +1,21 @@
+@import './variables';
+
+label {
+  display: block;
+  margin-bottom: $gutter-width;
+}
+
+input[type="text"], input[type="password"] {
+  margin-top: .25em;
+  display: block;
+  width: 100%;
+  border: 1px solid $color-grey-medium;
+  border-radius: $input-border-radius;
+  font-size: $font-size-base;
+  padding: .75em;
+  transition: border $animation-time $animation-easing-curve;
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
